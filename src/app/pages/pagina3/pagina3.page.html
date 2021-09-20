@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar><ion-img src="assets/icon3.png " slot="end" class="icon"></ion-img>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondologin">
+ <!-- <ion-item>
+    <ion-label position="floating">Ingrese su nombre: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Genero</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">Femenino</ion-select-option>
+      <ion-select-option value="m">Masculino</ion-select-option>
+      <ion-select-option value="o">Otros</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Ingrese su correo: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" type="number">Ingrese su numero: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" type="password">Ingrese su numero: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>-->
+  <ion-card>
+  <form #formulario="ngForm" (ngSubmit) ="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Ingrese su nombre: </ion-label>
+      <ion-input type="nombre" placeholder="Nombre"
+                 name="nombre" [(ngModel)]= "usuario.nombre"
+                 pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Numero de Celular: </ion-label>
+      <ion-input type="tel" placeholder="Celular"
+                 name="celular" [(ngModel)]= "usuario.celular"
+                 pattern="[+9]{1}[0-9]{8}"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Genero</ion-label>
+      <ion-select type="genero" name="genero" [(ngModel)]= "usuario.genero" placeholder="Selecciona uno" required>
+        <ion-select-option value="f">Femenino</ion-select-option>
+        <ion-select-option value="m">Masculino</ion-select-option>
+        <ion-select-option value="o">Otros</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ingrese su correo: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="email" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 required>
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Contraseña: </ion-label>
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password" [(ngModel)]= "usuario.password"
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-button [disabled] ="formulario.invalid"
+        type="submit" expand="block" color="dark" routerLink="/inicio">
+      Crear cuenta
+    </ion-button>
+  </form></ion-card>
+
+</ion-content>
