@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/icon3.png " slot="end" class="icon"></ion-img>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Back" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Iniciar Sesion</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="fondologin">
+<div class="container">
+  <div class="card text-center">
+  <div class="card-body">
+    <ion-item>
+      <ion-label class="color" position="floating">Email: </ion-label>
+      <ion-input class="color" type="email" placeholder="" [(ngModel)]="usuario.email">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label class="color" position="floating">Contraseña: </ion-label>
+        <ion-input class="color" type="password" placeholder="" [(ngModel)]="usuario.password">
+        </ion-input>
+    </ion-item>
+    <ion-button  expand="block" color="light" class=" m-4" (click)="Ingresar()" (click)="ObtenerUsuarioLogeado()" routerLink="/inicio" >Ingresar</ion-button>
+    <ion-button  expand="block" color="danger" routerLink="/inicio" class=" m-4" (click)="IngresarConGoogle()"><ion-icon class="margin" name="logo-google"></ion-icon>Continuar con Google</ion-button>
+    <ion-label class="color">  Aun no tienes cuenta? 
+    <a routerLink="/pagina5">Registrarse</a>
+    </ion-label>
+  </div>
+</div>
+</div>
+</ion-content>

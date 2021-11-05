@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img src="assets/icon3.png " slot="end" class="icon"></ion-img>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Back" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding fondologin">
+    <div class="container">
+      <div class="card text-center ">
+        <div class="card-body " >
+          <ion-item>
+            <ion-label class="color" position="floating">Nombre de usuario: </ion-label>
+            <ion-input class="color" type="Nombre" placeholder="" [(ngModel)]="usuario.nombre">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="color" position="floating">Email: </ion-label>
+            <ion-input class="color" type="email" placeholder="" [(ngModel)]="usuario.email">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="color" position="floating">Contraseña: </ion-label>
+            <ion-input class="color" type="password" placeholder="" [(ngModel)]="usuario.password">
+            </ion-input>
+          </ion-item>
+          <ion-button expand="block" color="light"class=" m-6" (click)="Registrar()"  routerLink="/inicio">Ingresar</ion-button>
+        </div>
+      </div>
+    </div>
+    <!--
+    <h6>Lista de users</h6>
+  <ul>
+    <li *ngFor="let user of listaDeUsuarios" >{{user | json}}</li>
+
+  </ul>-->
+  </ion-content>

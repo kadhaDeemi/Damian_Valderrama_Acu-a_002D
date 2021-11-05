@@ -16,9 +16,22 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pagina2/pagina2.module').then( m => m.Pagina2PageModule)
   },
   {
-    path: 'pagina3',
-    loadChildren: () => import('./pages/pagina3/pagina3.module').then( m => m.Pagina3PageModule)
+    path: 'pagina4',
+    loadChildren: () => import('./pages/pagina4/pagina4.module').then( m => m.Pagina4PageModule)
   },
+    {
+    path: 'pagina5',
+    loadChildren: () => import('./pages/pagina5/pagina5.module').then( m => m.Pagina5PageModule)
+  },
+  {
+    path: 'pagina6',
+    loadChildren: () => import('./pages/pagina6/pagina6.module').then( m => m.Pagina6PageModule)
+  },
+  {
+    path: 'pagina7',
+    loadChildren: () => import('./pages/pagina7/pagina7.module').then( m => m.Pagina7PageModule)
+  }
+  
 ];
 
 @NgModule({

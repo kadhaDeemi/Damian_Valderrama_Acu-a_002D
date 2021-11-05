@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar><ion-img src="assets/icon3.png " slot="end" class="icon"></ion-img>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CRUD ADMIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding fondologin">
+  <ion-item>
+    <ion-label class="color" position="floating">Nombre de usuario:</ion-label>
+    <ion-input class="color" type="text" [(ngModel)]="usuario.nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="color" position="floating">Email:</ion-label>
+    <ion-input class="color" type="text" [(ngModel)]="usuario.email" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="color" position="floating">Contraseña: </ion-label>
+    <ion-input class="color" type="password" placeholder="Contraseña"
+               name="password" [(ngModel)]= "usuario.password"
+               required>
+    </ion-input>
+  </ion-item>
+
+  <ion-button (click)="CrearUsuario()" color="light" expand="block">
+    Crear
+  </ion-button>
+<br><br>
+  <ion-item *ngFor="let dato of listaDeUsuarios">
+    <ion-label  class="normal color">{{dato.email}}</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="modificar(dato.id)">
+        <ion-icon slot="icon-only" color="light" name="create-sharp"></ion-icon>
+      </ion-button>
+      <ion-button (click)="eliminar(dato.id)">
+        <ion-icon slot="icon-only" color="danger" name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-content>
