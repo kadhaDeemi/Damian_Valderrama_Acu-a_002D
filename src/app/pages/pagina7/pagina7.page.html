@@ -45,4 +45,17 @@
       </ion-button>
     </ion-buttons>
   </ion-item>
+
+<ion-item *ngFor="let dato of listaDeUsuarios">
+  <ion-label  class="normal color">{{dato.id}}</ion-label>
+</ion-item>
+<ion-item *ngFor="let dato of listaDeUsuarios">
+  <ion-label  class="normal color">{{dato.nombre}}</ion-label>
+</ion-item>
+  <ion-item *ngFor="let dato of listaDeUsuarios">
+  <ion-label  class="normal color">{{dato.email}}</ion-label>
+</ion-item>
+  <ion-item *ngFor="let dato of listaDeUsuarios">
+  <ion-label  class="normal color">{{dato.password}}</ion-label>
+</ion-item>
 </ion-content>
