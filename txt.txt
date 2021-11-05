@@ -1,0 +1,10 @@
+iniciar sesion en firebase
+gmail: goodgame.izipiz1@gmail.com
+
+npm install -g firebase
+
+ng add @angular/fire
+
+npm i @angular/fire
+
+npm i @firebase/auth
