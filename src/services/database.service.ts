@@ -90,10 +90,8 @@ export class DatabaseService {
   getUserLogged() {
     return this.afaauth.authState;
   }
-
   logout() {
     this.afaauth.signOut();
   }
-
 
 }
